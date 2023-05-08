@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+time
+scipy
+streamlit
+plotly
+random
+io
+itertools
+datetime
