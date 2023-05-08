@@ -1,9 +1,6 @@
-pandas
-numpy
-time
-scipy
-plotly
-random
-io
-itertools
-datetime
+matplotlib==3.7.1
+numpy==1.24.2
+pandas==1.5.3
+plotly==5.13.1
+scipy==1.10.1
+streamlit==1.21.0
