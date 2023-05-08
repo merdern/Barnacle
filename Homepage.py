@@ -276,11 +276,11 @@ with tab1:
 
                                         # Create a DataFrame with appropriate column names
                                         columns = ['Yaw', 'Pitch', 'U', 'Ux', 'Uy', 'Uz']
-                                        data = pd.DataFrame(stacked_data, columns=columns)
+                                        #data = pd.DataFrame(stacked_data, columns=columns)
 
-                                        csv = datatocsv(data)
+                                        #csv = datatocsv(data)
 
-                                        st.download_button(label = "Download Processed Data", data = csv, file_name = "data", mime = 'text/csv', use_container_width= True)
+                                        #st.download_button(label = "Download Processed Data", data = csv, file_name = "data", mime = 'text/csv', use_container_width= True)
                                         intensities, intensitiesx, intensitiesy, intensitiesz = [], [], [], []
                                         if len(tide_ranges) > 3:
                                             for start,end in tide_ranges:
