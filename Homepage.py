@@ -342,7 +342,7 @@ with tab1:
                                                             traces_pitch.append(go.Scatter(x = times, y=pitch[start:end], opacity = 0.75, name=f'{BarnFile.name} Pitch, time = {datetime.timedelta(seconds = int(start))}:{datetime.timedelta(seconds = int(end))}', mode='lines'))
                                                             traces_yaw.append(go.Scatter(x = times, y=yaw[start:end], opacity = 0.75, name=f'{BarnFile.name}Yaw, time = {datetime.timedelta(seconds = int(start))}:{datetime.timedelta(seconds = int(end))}', mode='lines'))
 
-                                                    else:
+                                                else:
                                                             start,end = tide_ranges
                                                             traces_U.append(go.Scatter(x = times, y = U[start:end], opacity = 0.75,  name = f"{BarnFile.name} U - Intensity = {intensity}%, time = {datetime.timedelta(seconds = int(start))}:{datetime.timedelta(seconds = int(end))}"))
                                                             traces_ux.append(go.Scatter(x = times, y = Ux[start:end], opacity = 0.75, name = f"{BarnFile.name} Ux - Intensity = {intensityx}%, time = {datetime.timedelta(seconds = int(start))}:{datetime.timedelta(seconds = int(end))}"))
@@ -374,7 +374,6 @@ with tab1:
             with tab2:
                 if numberoffiles == len(uploadedBarnFiles):
                     i = 0
-                    st.write(i)
                     if 'length_scales' in locals():
                         for BarnFile in uploadedBarnFiles:
                             st.subheader(f"Estimated Length Scale for {BarnFile.name} data set is {length_scales[i]}m")
