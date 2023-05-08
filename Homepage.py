@@ -373,6 +373,7 @@ with tab1:
             with tab2:
                 if numberoffiles == len(uploadedBarnFiles):
                     i = 0
+                    print(i)
                     if 'length_scales' in locals():
                         for BarnFile in uploadedBarnFiles:
                             st.subheader(f"Estimated Length Scale for {BarnFile.name} data set is {length_scales[i]}m")
