@@ -297,6 +297,7 @@ with tab1:
                                                 alllength_scale = findlengthscale(U[start:end])
                                                 length_scale = np.mean(alllength_scale)                                       
                                                 length_scale = round(length_scale,2)
+                                             length_scales.append(length_scale)
                                         else:
                                                 start,end = tide_ranges
                                                 eachintensity, eachintensityx, eachintensityy, eachintensityz = findintensity(U[start:end], Ux[start:end], Uy[start:end], Uz[start:end])
