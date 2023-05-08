@@ -2,7 +2,6 @@ pandas
 numpy
 time
 scipy
-streamlit
 plotly
 random
 io
