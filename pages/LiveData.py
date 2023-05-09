@@ -335,7 +335,6 @@ if ZerosFile is not None:
                                 fig_vel = go.Figure(data=traces_vel, layout=chart_layout)
                                 fig_vel.update_layout(showlegend = True)
                                 st.plotly_chart(fig_vel, use_container_width=True)
-                                st.write(st.session_state.data)
                         
                         with col2:
                             st.plotly_chart(st.session_state.figpitch, use_container_width= True)
