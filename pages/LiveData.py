@@ -229,8 +229,8 @@ if ZerosFile is not None:
                 Barndata_with_newdata += newdata.values[0]
 
                 denominator = np.mean(Barndata.iloc[:, 0:4], axis = 1)
-                probeyaw = (Barndata_with_newdata.iloc[:,1]-Barndata_with_newdata.iloc[:,3])/denominator
-                probepitch = (Barndata_with_newdata.iloc[:,0]-Barndata_with_newdata.iloc[:,2])/denominator
+                probeyaw = (Barndata_with_newdata.iloc[1]-Barndata_with_newdata.iloc[3])/denominator
+                probepitch = (Barndata_with_newdata.iloc[0]-Barndata_with_newdata.iloc[2])/denominator
 
                 
 
