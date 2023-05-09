@@ -259,6 +259,8 @@ if ZerosFile is not None:
                 
                 time.sleep(1/16)
 
+                st.write(Barndata)
+
                 if len(Barndata) != 0 and len(Barndata) % 16 == 0:
                     
                     
