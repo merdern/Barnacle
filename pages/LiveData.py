@@ -279,7 +279,7 @@ if ZerosFile is not None:
                     st.session_state.traceuy = trace_uy
                     st.session_state.traceuz = trace_uz
                     
-                    st.write('hi')
+                  
                     trace_pitch = go.Scatter(x = times, y=pitch, name='Pitch', mode='lines')
                     fig_pitch = go.Figure(data = trace_pitch, layout=chart_layoutpitch)
                     st.session_state.figpitch = fig_pitch
