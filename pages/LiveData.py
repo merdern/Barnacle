@@ -248,7 +248,8 @@ if ZerosFile is not None:
                 if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
                     fresh.loc[1, [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
                 else:
-                    fresh.loc[1, [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
+                    fresh.loc[1, [0,2]] = Barndata.iloc[-1, [0,2]] - newdata.iloc[0, [0,2]]       
+
 
                 Barndata = pd.concat([Barndata, fresh], ignore_index=True)
                 
