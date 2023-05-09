@@ -233,7 +233,7 @@ if ZerosFile is not None:
                 probeyaw = (Barndata_with_newdata[1]-Barndata_with_newdata[3])/denominator
                 probepitch = (Barndata_with_newdata[0]-Barndata_with_newdata[2])/denominator
 
-                st.write(probepitch)
+                st.write(probepitch.values[0])
                 st.write(yawcal2[65], yawcal2[25])
 
                 
