@@ -207,11 +207,7 @@ if ZerosFile is not None:
         st.button('Refresh Data', on_click = refreshdata, use_container_width= True)
 
         
-    
-
-    #Barndata = [random.randint(350, 400) for _ in range(4)]
     Barndata = [0,0,0,0]
-    #Barndata = [Barndata/100 for Barndata in Barndata]
     Barndata = pd.DataFrame([Barndata])
 
     Yawfit = [5.6971e-05, 2.2509e-04, 0.0531, -0.0661]
