@@ -4,9 +4,9 @@ import streamlit as st
 st.set_page_config(page_title='Barnacle Dashboard', page_icon='🌊', layout='centered', initial_sidebar_state= 'expanded')
 st.title('Barnacle Dashboard 📈')
 
-freq = st.number_input('Set Frequency of Data Logger', value = 16)
+freq = st.number_input('Set Frequency of Data Logger (Hz)', value = 16)
 
-depth = st.number_input('Set Expected Depth of Barnacle', value = 100)
+depth = st.number_input('Set Expected Depth of Barnacle (m)', value = 100)
 
 st.button("Program Barnacle", use_container_width=True)
 
