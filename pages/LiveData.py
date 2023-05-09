@@ -260,7 +260,8 @@ if ZerosFile is not None:
                 time.sleep(1/16)
 
                 if len(Barndata) != 0 and len(Barndata) % 16 == 0:
-
+                    
+                    
                     yaw,pitch,U,Ux,Uy,Uz = DataProcessing(Barndata, st.session_state.zerosdata, st.session_state.low, st.session_state.high)
                     times = np.arange(len(Ux)) / 16
                     intensity, intensityx, intensityy, intensityz = findintensity(U, Ux, Uy, Uz)
@@ -277,6 +278,7 @@ if ZerosFile is not None:
                     st.session_state.traceuy = trace_uy
                     st.session_state.traceuz = trace_uz
                     
+                    st.write('hi')
                     trace_pitch = go.Scatter(x = times, y=pitch, name='Pitch', mode='lines')
                     fig_pitch = go.Figure(data = trace_pitch, layout=chart_layoutpitch)
                     st.session_state.figpitch = fig_pitch
