@@ -8,5 +8,5 @@ freq = st.number_input('Set Frequency of Data Logger', value = 16)
 
 depth = st.number_input('Set Expected Depth of Barnacle', value = 100)
 
-st.button("Program Barnacle")
+st.button("Program Barnacle", use_container_width=True)
 
