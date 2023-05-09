@@ -230,8 +230,8 @@ if ZerosFile is not None:
                 st.write(Barndata_with_newdata)
 
                 denominator = np.mean(Barndata.iloc[:, 0:4], axis = 1)
-                probeyaw = (Barndata_with_newdata.iloc[1]-Barndata_with_newdata.iloc[3])/denominator
-                probepitch = (Barndata_with_newdata.iloc[0]-Barndata_with_newdata.iloc[2])/denominator
+                probeyaw = (Barndata_with_newdata[1]-Barndata_with_newdata[3])/denominator
+                probepitch = (Barndata_with_newdata[0]-Barndata_with_newdata[2])/denominator
 
                 
 
