@@ -237,20 +237,27 @@ if ZerosFile is not None:
                 st.write(yawcal2[65], yawcal2[25])
 
                 
+    #            if yawcal2[65] > probeyaw.values[0] > yawcal2[25]:
+   #                 Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]  
+  #              else:
+ #                   Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] - newdata.iloc[0, [1,3]]    
+#
+    #            if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
+   #                 Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
+  #              else:
+ #                   Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]    
+
+                fresh = pd.DataFrame(columns=[0,1,2,3])
+
                 if yawcal2[65] > probeyaw.values[0] > yawcal2[25]:
-                    Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]
-
-                    if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
-                        Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
-                    else:
-                        Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]  
+                    fresh.loc[1,3] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]  
                 else:
-                    Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] - newdata.iloc[0, [1,3]]    
+                    fresh.loc[1,3] = Barndata.iloc[-1, [1,3]] - newdata.iloc[0, [1,3]]    
 
-                    if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
-                        Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
-                    else:
-                            Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]      
+                if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
+                    fresh.loc[0,2] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
+                else:
+                    fresh.loc[0,2] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
 
 
                 
