@@ -213,16 +213,31 @@ if ZerosFile is not None:
     Barndata = [Barndata/100 for Barndata in Barndata]
     Barndata = pd.DataFrame([Barndata])
 
+    Yawfit = [5.6971e-05, 2.2509e-04, 0.0531, -0.0661]
+    yawcal1 = np.linspace(-45,45,91)
+    yawcal2 = np.polyval(Yawfit, yawcal1)
 
     while st.session_state.godata:
                 # Simulate data stream
                 newdata = np.random.rand(1, 4) - 0.5
                 newdata = pd.DataFrame(newdata)
+
+                denominator = np.mean(Barndata.iloc[:, 0:4], axis = 1)
+                probeyaw = (newdata.iloc[:,1]-newdata.iloc[:,3])/denominator
+                probepitch = (newdata.iloc[:,0]-newdata.iloc[:,2])/denominator
+
+                
+
                 time.sleep(1/16)
-                if 4.5 > (Barndata.iloc[-1] + newdata.iloc[0]).any() > 3.6:
-                    Barndata.loc[len(Barndata)] = Barndata.iloc[-1] + newdata.iloc[0]
+                if yawcal2[65] > probeyaw > yawcal2[25]:
+                    Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]
                 else:
-                     Barndata.loc[len(Barndata)] = Barndata.iloc[-1] - newdata.iloc[0]           
+                     Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] - newdata.iloc[0, [1,3]]    
+
+                if yawcal2[65] > probepitch > yawcal2[25]:
+                    Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
+                else:
+                     Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
                 
                 
                
