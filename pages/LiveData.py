@@ -226,7 +226,7 @@ if ZerosFile is not None:
                 newdata = pd.DataFrame(newdata)
 
                 Barndata_with_newdata = Barndata.iloc[-1].copy()
-                Barndata_with_newdata += newdata.values[0]
+                Barndata_with_newdata = Barndata_with_newdata + newdata.values[0]
 
                 denominator = np.mean(Barndata.iloc[:, 0:4], axis = 1)
                 probeyaw = (Barndata_with_newdata.iloc[1]-Barndata_with_newdata.iloc[3])/denominator
