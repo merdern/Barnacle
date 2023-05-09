@@ -233,9 +233,6 @@ if ZerosFile is not None:
                 probeyaw = (Barndata_with_newdata[1]-Barndata_with_newdata[3])/denominator
                 probepitch = (Barndata_with_newdata[0]-Barndata_with_newdata[2])/denominator
 
-                st.write(probepitch)
-                st.write(yawcal2[65], yawcal2[25])
-
                 
     #            if yawcal2[65] > probeyaw.values[0] > yawcal2[25]:
    #                 Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]  
@@ -259,9 +256,7 @@ if ZerosFile is not None:
                 else:
                     fresh.loc[1, [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
 
-                st.write('fresh')
-                st.write(fresh)
-                
+                Barndata.append(fresh)
                 
                 time.sleep(1/16)
 
