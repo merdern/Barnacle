@@ -260,9 +260,9 @@ if ZerosFile is not None:
                     fresh.loc[0,2] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
 
 
+                st.write(fresh)
                 
                 
-                st.write(Barndata)
                 time.sleep(1/16)
 
                 if len(Barndata) != 0 and len(Barndata) % 16 == 0:
