@@ -226,10 +226,11 @@ if ZerosFile is not None:
                 newdata = pd.DataFrame(newdata)
 
                 Barndata_with_newdata = Barndata.iloc[-1].copy()
-                if 4.5 > Barndata_with_newdata + newdata > 3.6:
-                    Barndata_with_newdata = Barndata_with_newdata + newdata
-                else:
-                     Barndata_with_newdata = Barndata_with_newdata - newdata
+                for col in Barndata_with_newdata.columns:
+                    if 4.5 > Barndata_with_newdata[col].values[0] + newdata[col].values[0] > 3.6:
+                        Barndata_with_newdata[col] = Barndata_with_newdata[col] + newdata[col]
+                    else:
+                        Barndata_with_newdata[col] = Barndata_with_newdata[col] - newdata[col]
 
 
                 denominator = np.mean(Barndata.iloc[:, 0:4], axis = 1)
