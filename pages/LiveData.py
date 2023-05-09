@@ -247,10 +247,10 @@ if ZerosFile is not None:
                 else:
                     Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] - newdata.iloc[0, [1,3]]    
 
-                if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
-                    Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
-                else:
-                        Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]      
+                    if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
+                        Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
+                    else:
+                            Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]      
 
 
                 
