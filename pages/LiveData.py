@@ -255,7 +255,7 @@ if ZerosFile is not None:
                 else:
                     fresh.loc[1, [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
 
-                Barndata.append(fresh)
+                Barndata = pd.concat([Barndata, fresh], ignore_index=True)
                 
                 time.sleep(1/16)
 
