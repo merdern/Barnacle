@@ -234,7 +234,7 @@ if ZerosFile is not None:
 
                 
 
-                time.sleep(1/16)
+                
                 if yawcal2[65] > probeyaw.values[0] > yawcal2[25]:
                     Barndata.loc[len(Barndata), [1,3]] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]
                 else:
@@ -247,6 +247,7 @@ if ZerosFile is not None:
                 
                 
                 st.write(Barndata)
+                time.sleep(1/16)
 
                 if len(Barndata) != 0 and len(Barndata) % 16 == 0:
 
