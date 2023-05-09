@@ -217,6 +217,9 @@ if ZerosFile is not None:
     yawcal1 = np.linspace(-45,45,91)
     yawcal2 = np.polyval(Yawfit, yawcal1)
 
+    if "godata" not in st.session_state:
+         st.session_state.godata = False 
+
     while st.session_state.godata:
                 # Simulate data stream
                 newdata = np.random.rand(1, 4) - 0.5
