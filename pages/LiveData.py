@@ -246,7 +246,7 @@ if ZerosFile is not None:
                      Barndata.loc[len(Barndata), [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
                 
                 
-               
+                st.write(Barndata)
 
                 if len(Barndata) != 0 and len(Barndata) % 16 == 0:
 
