@@ -228,7 +228,7 @@ if ZerosFile is not None:
                 Barndata_with_newdata = Barndata.iloc[-1].copy()
                 Barndata_with_newdata = pd.DataFrame([Barndata_with_newdata])
                 for col in Barndata_with_newdata.columns:
-                    if 4.5 > Barndata_with_newdata[col].values[0] + newdata[col].values[0] > 3.6:
+                    if 4 > Barndata_with_newdata[col].values[0] + newdata[col].values[0] > 3.6:
                         Barndata_with_newdata[col] = Barndata_with_newdata[col] + newdata[col]
                     else:
                         Barndata_with_newdata[col] = Barndata_with_newdata[col] - newdata[col]
