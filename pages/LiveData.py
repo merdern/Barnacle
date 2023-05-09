@@ -222,7 +222,7 @@ if ZerosFile is not None:
 
     while st.session_state.godata:
                 # Simulate data stream
-                newdata = np.random.rand(1, 4) - 0.5
+                newdata = (np.random.rand(1, 4) - 0.5)/10
                 newdata = pd.DataFrame(newdata)
 
                 Barndata_with_newdata = Barndata.iloc[-1].copy()
