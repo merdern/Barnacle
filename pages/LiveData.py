@@ -250,14 +250,14 @@ if ZerosFile is not None:
                 fresh = pd.DataFrame(columns=[0,1,2,3])
 
                 if yawcal2[65] > probeyaw.values[0] > yawcal2[25]:
-                    fresh.loc[1,3] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]  
+                    fresh.loc[1,[1,3]] = Barndata.iloc[-1, [1,3]] + newdata.iloc[0, [1,3]]  
                 else:
-                    fresh.loc[1,3] = Barndata.iloc[-1, [1,3]] - newdata.iloc[0, [1,3]]    
+                    fresh.loc[1,[1,3]] = Barndata.iloc[-1, [1,3]] - newdata.iloc[0, [1,3]]    
 
                 if yawcal2[65] > probepitch.values[0] > yawcal2[25]:
-                    fresh.loc[0,2] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
+                    fresh.loc[1, [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]
                 else:
-                    fresh.loc[0,2] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
+                    fresh.loc[1, [0,2]] = Barndata.iloc[-1, [0,2]] + newdata.iloc[0, [0,2]]       
 
                 st.write('fresh')
                 st.write(fresh)
