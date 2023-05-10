@@ -280,7 +280,7 @@ with tab1:
 
                                         #csv = datatocsv(data)
 
-                                        st.write(BarnFile.Name)
+                                        st.write(BarnFile.name)
                                         if BarnFile.name == 'weekend1427':
                                              fs = 1
                                         else: fs = 16
