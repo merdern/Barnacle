@@ -280,6 +280,9 @@ with tab1:
 
                                         #csv = datatocsv(data)
 
+                                        if BarnData.name == 'weekend1427':
+                                             fs = 1
+                                        else: fs = 16
                                         #st.download_button(label = "Download Processed Data", data = csv, file_name = "data", mime = 'text/csv', use_container_width= True)
                                         intensities, intensitiesx, intensitiesy, intensitiesz = [], [], [], []
                                         if len(tide_ranges) > 3:
@@ -314,6 +317,8 @@ with tab1:
                                                 length_scale = np.mean(alllength_scale)                                       
                                                 length_scale = round(length_scale,2)
                                                 length_scales.append(length_scale)
+
+                                        
                                         times = np.arange(len(Ux)) / fs
                                         
                                         
