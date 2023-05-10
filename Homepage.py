@@ -280,7 +280,8 @@ with tab1:
 
                                         #csv = datatocsv(data)
 
-                                        if BarnData.name == 'weekend1427':
+                                        st.write(BarnFile.Name)
+                                        if BarnFile.name == 'weekend1427':
                                              fs = 1
                                         else: fs = 16
                                         #st.download_button(label = "Download Processed Data", data = csv, file_name = "data", mime = 'text/csv', use_container_width= True)
