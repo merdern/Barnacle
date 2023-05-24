@@ -4,11 +4,15 @@ import streamlit as st
 st.set_page_config(page_title='Barnacle Dashboard', page_icon='🌊', layout='centered', initial_sidebar_state= 'expanded')
 st.title('Barnacle Dashboard 📈')
 
-freq = st.number_input('Set Frequency of Data Logger (Hz)', value = 16)
+tab1, tab2 = st.tabs(2)
 
-depth = st.number_input('Set Expected Depth of Barnacle (m)', value = 100)
+with tab1:
+  
+  freq = st.number_input('Set Frequency of Data Logger (Hz)', value = 16)
 
-temp = st.number_input('Set Expected Temperature of Barnacle (°C)', value = 12)
+  depth = st.number_input('Set Expected Depth of Barnacle (m)', value = 100)
 
-st.button("Program Barnacle", use_container_width=True)
+  temp = st.number_input('Set Expected Temperature of Barnacle (°C)', value = 12)
+
+  st.button("Program Barnacle", use_container_width=True)
 
