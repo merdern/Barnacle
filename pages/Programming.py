@@ -28,4 +28,4 @@ with tab2:
   
   st.button('Generate zero-flow file', use_container_width = True)
   
-  st.button('Save zero-flow file', use_container_width = True)
+  st.button('Save zero-flow file', use_container_width = True, type = 'primary')
