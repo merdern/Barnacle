@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title='Barnacle Dashboard', page_icon='🌊', layout='centered', initial_sidebar_state= 'expanded')
 st.title('Barnacle Dashboard 📈')
 
-tab1, tab2 = st.tabs(['Program Barnacle', 'Generate Zero Flow File'])
+tab1, tab2 = st.tabs(['Program Barnacle', 'Calibration'])
 
 with tab1:
 
