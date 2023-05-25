@@ -425,8 +425,8 @@ with tab3:
         st.write('---')
 
         st.subheader('For pre-existing Barnacle Data')
-        st.write('Use the Upload Data tab to upload Zero-Flow Data, multiple files can be uploaded. Upload the Barnacle Data and set the region of genuine slackwater for each Zero-Flow file and confirm. A button to download the processed data as a csv is at the bottom of the page.')
-        st.write('Move to the Data Presentation tab to view the files that have been uploaded, the length scale for each data file is shown at the top of the page. Multiple velocity components can be shown on the graph and intensity can be seen in the legend.')
+        st.write('Use the Upload Data tab to upload Zero-Flow Data, multiple files can be uploaded. Upload the Barnacle Data and set the region of genuine slackwater for each Zero-Flow file and confirm.')
+        st.write('Move to the Data Presentation tab to view plots for the files that have been uploaded, the length scale for each data file is shown at the top of the page. Multiple velocity components can be shown on the graph and intensity can be seen in the legend.')
         st.write('Plots can be saved and manipulated using the tools in the top right of each plot')
         
         st.subheader('For Live Data')
