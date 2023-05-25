@@ -276,15 +276,15 @@ with tab1:
 
                                         # Create a DataFrame with appropriate column names
                                         columns = ['Yaw', 'Pitch', 'U', 'Ux', 'Uy', 'Uz']
-                                        #data = pd.DataFrame(stacked_data, columns=columns)
+                                        data = pd.DataFrame(stacked_data, columns=columns)
 
-                                        #csv = datatocsv(data)
+                                        csv = datatocsv(data)
 
                                         st.write(BarnFile.name)
                                         if BarnFile.name == 'weekend1427':
                                              fs = 1
                                         else: fs = 16
-                                        #st.download_button(label = "Download Processed Data", data = csv, file_name = "data", mime = 'text/csv', use_container_width= True)
+                                        st.download_button(label = "Download Processed Data", data = csv, file_name = "data", mime = 'text/csv', use_container_width= True)
                                         intensities, intensitiesx, intensitiesy, intensitiesz = [], [], [], []
                                         if len(tide_ranges) > 3:
                                             for start,end in tide_ranges:
@@ -434,6 +434,6 @@ with tab3:
         st.write('Upload a Zeros flow file and set the region of slack water, confirm and press the data button to simulate live Barnacle Data.')
 
         st.subheader('Programming')
-        st.write('Use the Programming tab to set the sampling rate of the Barnacle, and the expected depth and temperature of operation.')
+        st.write('Use the Programming tab to set the sampling rate, the expected depth and temperature of operation of the Barnacle as well as generate calibration files.')
 
 
